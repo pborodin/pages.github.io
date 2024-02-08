@@ -3,10 +3,11 @@ console.log('Hello!');
 // Global vars to cache event state
 const evCache = [];
 let prevDiff = -1;
+let el 
 
 function init() {
   // Install event handlers for the pointer target
-  const el = document.getElementById("svg");
+  el = document.getElementById("svg");
   el.onpointerdown = pointerdownHandler;
   el.onpointermove = pointermoveHandler;
 
@@ -26,6 +27,7 @@ function pointerdownHandler(ev) {
 }
 
 function pointermoveHandler(ev) {
+  if(el) el.setPointerCapture(ev.pointerId);
   // This function implements a 2-pointer horizontal pinch/zoom gesture.
   //
   // If the distance between the two pointers has increased (zoom in),
