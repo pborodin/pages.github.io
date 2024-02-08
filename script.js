@@ -5,6 +5,7 @@ const evCache = [];
 let prevDiff = -1;
 let el 
 
+
 function init() {
   // Install event handlers for the pointer target
   el = document.getElementById("svg");
@@ -27,6 +28,7 @@ function pointerdownHandler(ev) {
 }
 
 function pointermoveHandler(ev) {
+  ev.preventDefault()
   if(el) el.setPointerCapture(ev.pointerId);
   // This function implements a 2-pointer horizontal pinch/zoom gesture.
   //
