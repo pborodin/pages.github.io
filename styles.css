@@ -9,6 +9,13 @@ body {
 }
 
 .main-menu {
+  width: 100vh;
+  height: 80px;
+  background: cornflowerblue;
+  display: inline-flex;
+}
+
+.main-item {
   width: 80px;
   height: 80px;
   font-weight:500;
@@ -64,7 +71,7 @@ body {
 }
 
 @media screen and (orientation: landscape) {
-  .main-menu: {
+  .main-menu {
     position: absolute;
     height: 100%;
     width: 80px;
