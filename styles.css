@@ -34,7 +34,7 @@ body {
 
 .toolbar-second {
   position: fixed;
-  top: calc(100vh - 180px)
+  top: calc(100vh - 180px);
   display: inline-flex;
   background: coral;
 }
@@ -84,7 +84,7 @@ body {
   .toolbar-second {
     top:unset;
     position: fixed;
-    left: calc(100vw - 354px)
+    left: calc(100vw - 354px);
     display: inline-flex;
     background: coral;
     margin-top: 0 !important;
