@@ -9,7 +9,7 @@ body {
 }
 
 .main-menu {
-  width: 100vh;
+  width: 100vw;
   height: 80px;
   background: cornflowerblue;
   display: inline-flex;
