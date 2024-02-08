@@ -1,9 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Home</title>
     <meta charset="UTF-8" />
-    <title>Adaptive</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="main-menu">
@@ -11,21 +12,26 @@
       <div class="menu-item"><div>&#x270E;</div></div>
       <div class="menu-item"><div>&#x271A;</div></div>
       <div class="menu-item"><div>&#x2715;</div></div>
+      <div class="menu-item" id="log"></div>
     </div>
-    
+
     <div>
-      <svg class="viewport"> </svg>
+      <svg id="svg" class="viewport">
+        <polygon points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
+      </svg>
       <div class="sidebar">
-        <div class="toolbar-item"> <div>a</div>
-                                    <div class="toolbar-second">
-                                      <div class="toolbar-item"> <div>1</div> </div>
-                                      <div class="toolbar-item"> <div>2</div> </div>
-                                      <div class="toolbar-item"> <div>3</div> </div>
-                                    </div>
+        <div class="toolbar-item">
+          <div>a</div>
+          <div class="toolbar-second">
+            <div class="toolbar-item"><div>1</div></div>
+            <div class="toolbar-item"><div>2</div></div>
+            <div class="toolbar-item"><div>3</div></div>
+          </div>
         </div>
-        <div class="toolbar-item"> <div>b</div> </div>
-        <div class="toolbar-item"> <div>c</div> </div>
+        <div class="toolbar-item"><div>b</div></div>
+        <div class="toolbar-item"><div>c</div></div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
