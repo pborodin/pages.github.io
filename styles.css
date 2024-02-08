@@ -1,0 +1,117 @@
+body {
+  margin:0;
+  padding:0;
+}
+
+.main {
+  width: 100%;
+  height: 80vh;
+}
+
+.main-menu {
+  width: 80px;
+  height: 80px;
+  font-weight:500;
+  font-size:2em;
+  color: #3f3f3f;
+}
+
+.menu-item > div {
+  margin-top: 16px;
+  margin-left: 25px;
+}
+
+.sidebar {
+  position: absolute;
+  width: 100vw;
+  top: calc(100vh - 80px);
+  display: inline-flex;
+  background: cornflowerblue;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row
+}
+
+.toolbar-second {
+  position: fixed;
+  top: calc(100vh - 180px)
+  display: inline-flex;
+  background: coral;
+}
+
+.toolbar-item {
+  width: 80px;
+  height: 80px;
+  font-weight:500;
+  font-size:1.5em;
+  color: #3f3f3f;
+  display: inline-flex;
+}
+
+.toolbar-item > div {
+  margin-top: 16px;
+  margin-left: 25px;
+}
+
+.toolbar-item + .toolbar-item {
+  border-left: 3px solid #bbbbbb
+}
+
+.viewport {
+  border: 1px solid #bbb;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+
+@media screen and (orientation: landscape) {
+  .main-menu: {
+    position: absolute;
+    height: 100%;
+    width: 80px;
+    left: 0;
+    display: block;
+  }
+
+  .sidebar {
+    position: absolute;
+    width: 80px;
+    top: 9vh;
+    left: calc(100vw - 80px);
+    background: cornflowerblue;
+    display: block;
+  }
+  
+  .toolbar-second {
+    top:unset;
+    position: fixed;
+    left: calc(100vw - 354px)
+    display: inline-flex;
+    background: coral;
+    margin-top: 0 !important;
+  }
+
+  .toolbar-item + .toolbar-item {
+    border-left: none;
+    border-top: 3px solid #bbbbbb
+  }
+
+  .toolbar-second >.toolbar-item + .toolbar-item {
+    border-left: none;
+    border-top: unset;
+    border-left: 3px solid #bbbbbb
+  }
+
+  .main {
+    width: calc(100% - 80px);
+    height: 100%;
+    left: 80px;
+  }
+  
+  .viewport {
+    border: 1px solid #bbb;
+    width: calc(100vw);
+    height: 100vh;
+  }
+  
+  
+}
