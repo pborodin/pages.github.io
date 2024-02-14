@@ -51,16 +51,17 @@ function pointermoveHandler(ev) {
   if (evCache.length === 2) {
     // Calculate the distance between the two pointers
     const curDiff = Math.abs(evCache[0].clientX - evCache[1].clientX);
+    log1(evCache[0].clientX + " " + evCache[1].clientX);
 
     if (prevDiff > 0) {
       if (curDiff > prevDiff) {
         // The distance between the two pointers has increased
-        log("Pinch moving OUT -> Zoom in", ev);
+        // log("Pinch moving OUT -> Zoom in", ev);
         ev.target.style.background = "pink";
       }
       if (curDiff < prevDiff) {
         // The distance between the two pointers has decreased
-        log("Pinch moving IN -> Zoom out", ev);
+        // log("Pinch moving IN -> Zoom out", ev);
         ev.target.style.background = "lightblue";
       }
     }
@@ -93,6 +94,11 @@ function pointerupHandler(ev) {
   }
 }
 
+
+function log1(msg) {
+  const log = document.getElementById("log");
+  log.innerHTML = msg;
+}
 
 function log(prefix, ev) {
   const log = document.getElementById("log");
